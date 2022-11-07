@@ -8,7 +8,7 @@ on:
       - main
 
 jobs:
-  londonmapbot-post:
+  ntplacesbot-post:
     runs-on: macOS-latest
     env:
       TWITTER_CONSUMER_API_KEY: ${{ secrets.BOT_TwitterAPIkey }}
