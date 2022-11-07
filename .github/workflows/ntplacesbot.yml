@@ -9,7 +9,7 @@ on:
 
 jobs:
   ntplacesbot-post:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     env:
       TWITTER_CONSUMER_API_KEY: ${{ secrets.BOT_TwitterAPIkey }}
       TWITTER_CONSUMER_API_SECRET: ${{ secrets.BOT_TwitterAPIsecretkey }}
