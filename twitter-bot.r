@@ -25,7 +25,7 @@ nttwitterbot_token <- rtweet::rtweet_bot(
 )
 
 # Load the data set
-ntplaces_list <- readRDS("data/places.rds")
+ntplaces_list <- readRDS("places.rds")
 
 # Randomly Chose a Place
 ntplaces <- ntplaces_list %>% sample_n(size = 1)
