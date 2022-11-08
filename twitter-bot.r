@@ -18,10 +18,10 @@ hashtags <- "#nationaltrust"
 
 # Create Twitter token
 nttwitterbot_token <- rtweet::rtweet_bot(
-  api_key       = Sys.getenv("BOT_TwitterAPIkey"),
-  api_secret    = Sys.getenv("BOT_TwitterAPIsecretkey"),
-  access_token  = Sys.getenv("BOT_TwitterAccessToken"),
-  access_secret = Sys.getenv("BOT_TwitterAccessTokenSecret")
+  api_key       = Sys.getenv("BOT_TWITTERAPIKEY"),
+  api_secret    = Sys.getenv("BOT_TWITTERAPISECRETKEY"),
+  access_token  = Sys.getenv("BOT_TWITTERACCESSTOKEN"),
+  access_secret = Sys.getenv("BOT_TWITTERACCESSTOKENSECRET")
 )
 
 # Load the data set
@@ -40,7 +40,7 @@ url_address_short <- ShortURL(ntplaces$websiteUrl)
 # Get the image URL and store to a temporary location
 img_url <- ntplaces$imageUrl
 temp <- tempfile(fileext = ".jpeg")
-download.file(img_url, temp)
+download.file(img_url, temp, mode = "wb")
 
 # Build the status message (text and URL)
 place_details <- paste0(
