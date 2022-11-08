@@ -21,7 +21,8 @@ nttwitterbot_token <- rtweet::rtweet_bot(
   api_key       = Sys.getenv("BOT_TWITTERAPIKEY"),
   api_secret    = Sys.getenv("BOT_TWITTERAPISECRETKEY"),
   access_token  = Sys.getenv("BOT_TWITTERACCESSTOKEN"),
-  access_secret = Sys.getenv("BOT_TWITTERACCESSTOKENSECRET")
+  access_secret = Sys.getenv("BOT_TWITTERACCESSTOKENSECRET"),
+  set_renv = FALSE
 )
 
 # Load the data set
@@ -38,9 +39,9 @@ lon <- ntplaces$`location/longitude`
 url_address_short <- ShortURL(ntplaces$websiteUrl)
 
 # Get the image URL and store to a temporary location
-# img_url <- ntplaces$imageUrl
-# temp <- tempfile(fileext = ".jpeg")
-# download.file(img_url, temp, mode = "wb")
+img_url <- ntplaces$imageUrl
+temp <- tempfile(fileext = ".jpeg")
+download.file(img_url, temp, mode = "wb")
 
 # Build the status message (text and URL)
 place_details <- paste0(
@@ -55,8 +56,8 @@ alt_text <- paste(ntplaces$imageDescription)
 # Post the tweet to Twitter
 rtweet::post_tweet(
   status         = place_details,
- # media          = temp,
- # media_alt_text = alt_text,
+  media          = temp,
+  media_alt_text = alt_text,
   lat            = lat,
   long           = lon,
   token          = nttwitterbot_token
