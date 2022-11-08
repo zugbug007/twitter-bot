@@ -7,7 +7,7 @@ on:
       - main
 jobs:
   ntplacesbot-post:
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     
     steps:
       - uses: actions/checkout@v2
