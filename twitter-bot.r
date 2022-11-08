@@ -41,7 +41,7 @@ img_url <- ntplaces$imageUrl
 # temp_file <- tempfile(fileext = ".jpeg")
 # download.file(img_url, temp_file, mode ="wb")
 temp_file <- tempfile(fileext = ".jpeg")
-download.file(imageUrl, temp_file)
+download.file(img_url, temp_file)
 
 
 # Build the status message (text and URL)
