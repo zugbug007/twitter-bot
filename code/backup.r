@@ -3,10 +3,10 @@ library(dplyr)
 
 # Create Twitter token
 nttwitterbot_token <- rtweet::rtweet_bot(
-  api_key =    Sys.getenv("TWITTER_CONSUMER_API_KEY"),
-  api_secret = Sys.getenv("TWITTER_CONSUMER_API_SECRET"),
-  access_token =    Sys.getenv("TWITTER_ACCESS_TOKEN"),
-  access_secret =   Sys.getenv("TWITTER_ACCESS_TOKEN_SECRET")
+  api_key       = Sys.getenv("BOT_TWITTERAPIKEY"),
+  api_secret    = Sys.getenv("BOT_TWITTERAPISECRETKEY"),
+  access_token  = Sys.getenv("BOT_TWITTERACCESSTOKEN"),
+  access_secret = Sys.getenv("BOT_TWITTERACCESSTOKENSECRET")
 )
 
 # Build A Short link 
