@@ -14,7 +14,7 @@ ShortURL <- function(link, linkPreview = FALSE) {
 }
 
 # Hashtag list
-hashtags <- "#nationaltrust"
+hashtags <- "#NationalTrust #EveryoneNeedsNature"
 
 # Create Twitter token
 nttwitterbot_token <- rtweet::rtweet_bot(
@@ -38,9 +38,9 @@ lon <- ntplaces$`location/longitude`
 url_address_short <- ShortURL(ntplaces$websiteUrl)
 
 # Get the image URL and store to a temporary location
-img_url <- ntplaces$imageUrl
-temp <- tempfile(fileext = ".jpeg")
-download.file(img_url, temp, mode = "wb")
+# img_url <- ntplaces$imageUrl
+# temp <- tempfile(fileext = ".jpeg")
+# download.file(img_url, temp, mode = "wb")
 
 # Build the status message (text and URL)
 place_details <- paste0(
@@ -55,8 +55,8 @@ alt_text <- paste(ntplaces$imageDescription)
 # Post the tweet to Twitter
 rtweet::post_tweet(
   status         = place_details,
-  media          = temp,
-  media_alt_text = alt_text,
+ # media          = temp,
+ # media_alt_text = alt_text,
   lat            = lat,
   long           = lon,
   token          = nttwitterbot_token

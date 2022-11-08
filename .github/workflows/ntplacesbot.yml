@@ -1,5 +1,4 @@
 name: ntplacesbot
-
 on:
   #schedule:
    # - cron: '14 9/8 * * *'
