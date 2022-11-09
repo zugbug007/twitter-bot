@@ -38,11 +38,8 @@ url_address_short <- ShortURL(ntplaces$websiteUrl)
 
 # Get the image URL and store to a temporary location
 img_url <- ntplaces$imageUrl
-# temp_file <- tempfile(fileext = ".jpeg")
-# download.file(img_url, temp_file, mode ="wb")
 temp_file <- tempfile(fileext = ".jpeg")
 download.file(img_url, temp_file)
-
 
 # Build the status message (text and URL)
 place_details <- paste0(
