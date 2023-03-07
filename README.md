@@ -1,4 +1,3 @@
-[![ntplacesbot](https://github.com/zugbug007/twitter-bot/actions/workflows/ntplacesbot.yml/badge.svg?event=schedule)](https://github.com/zugbug007/twitter-bot/actions/workflows/ntplacesbot.yml)
 # National Trust Places Twitter Bot
 
 [NatTrustPlaces](https://twitter.com/NatTrustPlaces) is a simple twitter bot written using R to publish information about the National Trust properties in the UK and NI. This bot is inspired by [Matt Dray](https://github.com/matt-dray/)'s [londonmapbot](https://github.com/matt-dray/londonmapbot) which randomly tweets a location in London every 30 minutes. 
