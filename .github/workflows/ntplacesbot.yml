@@ -1,10 +1,10 @@
 name: ntplacesbot
 on:
-  schedule:
-    - cron: '30 9,15,20 * * *'  # trigger at 09:30, 15:30, 20:30 every day
-   # push:
-   #  branches:
-   #    - main
+  #schedule:
+   # - cron: '30 9,15,20 * * *'  # trigger at 09:30, 15:30, 20:30 every day
+    push:
+     branches:
+       - main
 jobs:
   ntplacesbot-post:
     runs-on: macOS-latest
